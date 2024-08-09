@@ -2,7 +2,7 @@
     <v-container class="d-flex align-center justify-center" align="center" id="container" style="height: 100vh;">
         <div class="d-flex flex-wrap justify-center align-center">
             <div class=" d-flex flex-column flex-wrap justify-center align-center">
-                <v-row>
+                <v-row class="d-flex align-center justify-center">
                     <v-col>
                         <div class="d-flex align-center justify-center flex-column text-start">
                             <div class="w-100">
