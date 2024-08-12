@@ -30,22 +30,22 @@ export default {
             items: [
                 {
                     title: 'Ros Properties',
-                    src: '/public/images/projects/ros-ui.png',
+                    src: '/images/projects/ros-ui.png',
                     subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, ",
                 },
                 {
                     title: 'Freshcery',
-                    src: '/public/images/projects/freshcery.png',
+                    src: '/images/projects/freshcery.png',
                     subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, ",
                 },
                 {
                     title: 'Library Management System for Santa Rosa Educational Institute',
-                    src: '/public/images/projects/lms.png',
+                    src: '/images/projects/lms.png',
                     subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, ",
                 },
                 {
                     title: 'Bayanihan Transpo',
-                    src: '/public/images/projects/transpo2.png',
+                    src: '/images/projects/transpo2.png',
                     subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, ",
                 },
             ],
