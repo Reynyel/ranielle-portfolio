@@ -31,22 +31,22 @@ export default {
                 {
                     title: 'Ros Properties',
                     src: '/images/projects/ros-ui.png',
-                    subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, ",
+                    subtitle: "Developed the frontend interface for a property listings web application",
                 },
                 {
                     title: 'Freshcery',
                     src: '/images/projects/freshcery.png',
-                    subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, ",
+                    subtitle: "Developed an e-commerce web app with cart and checkout system.",
                 },
                 {
                     title: 'Library Management System for Santa Rosa Educational Institute',
                     src: '/images/projects/lms.png',
-                    subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, ",
+                    subtitle: "Created a library system in Java with MySQL for our Capstone 2 project that manages inventory of books, circulation, user data, reports, and backups.",
                 },
                 {
                     title: 'Bayanihan Transpo',
                     src: '/images/projects/transpo2.png',
-                    subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, ",
+                    subtitle: "Developed a vehicle rental web app with distance-based pricing.",
                 },
             ],
         }
@@ -63,7 +63,7 @@ export default {
 
 
 .carousel-subtitle {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     /* Semi-transparent grey background */
     padding: 10px;
     /* Add padding to create space between text and background */
@@ -76,12 +76,16 @@ export default {
 .carousel-subtitle:hover {
     background-color: rgba(0, 0, 0);
 }
+
 .project-section {
-    min-height: 100vh; /* Full viewport height */
+    min-height: 100vh;
+    /* Full viewport height */
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
+    justify-content: center;
+    /* Center content vertically */
+    align-items: center;
+    /* Center content horizontally */
     text-align: center;
 }
 </style>
