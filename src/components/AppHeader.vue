@@ -4,7 +4,7 @@
         <v-app-bar app fixed class="app-bar text-center d-flex justify-center" v-if="!smAndDown">
             <v-row align="center" justify="center" class="flex-container">
                 <v-col cols="auto">
-                    <router-link to="/" class="nav">
+                    <router-link to="/" @click="scrollToHome" class="nav">
                         <v-btn class="text-white list-title text">Home</v-btn>
                     </router-link>
                 </v-col>
@@ -30,45 +30,25 @@
         <!-- Navigation drawer for smaller screens -->
         <v-navigation-drawer app v-if="smAndDown" v-model="drawer" temporary>
             <v-list dense>
-                <v-list-item class="text">
+                <v-list-item @click="scrollToHome" class="text">
                     <router-link to="/" class="nav">
                         <v-list-item-title>Home</v-list-item-title>
                     </router-link>
                 </v-list-item>
                 <v-divider></v-divider>
-
-
-                <v-expansion-panels flat>
-                    <v-hover>
-                        <template v-slot:default="{ isHovering, props }">
-                            <v-expansion-panel>
-                                <v-expansion-panel-title class="pl-2 ml-2">
-                                    <template v-slot>
-                                        <v-row no-gutters>
-                                            <v-col class="d-flex justify-start text" cols="12">
-                                                Our Properties
-                                            </v-col>
-                                        </v-row>
-                                    </template>
-                                </v-expansion-panel-title>
-
-                            </v-expansion-panel>
-                        </template>
-                    </v-hover>
-
-
-                </v-expansion-panels>
-                <v-divider></v-divider>
-                <v-list-item class="text">
-                    <router-link to="/about" class="nav">
-                        <v-list-item-title>About Ros</v-list-item-title>
+                <v-list-item @click="scrollToAbout" class="text">
+                    <router-link class="nav">
+                        <v-list-item-title>About</v-list-item-title>
                     </router-link>
                 </v-list-item>
                 <v-divider></v-divider>
-                <v-list-item @click="scrollToFooter" class="text">
-                    <v-list-item-title>Contact</v-list-item-title>
+                <v-list-item @click="scrollToSkills" class="text">
+                    <v-list-item-title>Skills</v-list-item-title>
                 </v-list-item>
                 <v-divider></v-divider>
+                <v-list-item @click="scrollToProjects" class="text">
+                    <v-list-item-title>Projects</v-list-item-title>
+                </v-list-item>
             </v-list>
         </v-navigation-drawer>
         <!-- Mobile app bar -->
@@ -102,6 +82,12 @@ export default {
         };
     },
     methods: {
+        scrollToHome() {
+            const footer = document.getElementById('home');
+            if (footer) {
+                footer.scrollIntoView({ behavior: 'smooth' });
+            }
+        },
         scrollToAbout() {
             const footer = document.getElementById('about');
             if (footer) {

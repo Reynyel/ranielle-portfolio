@@ -1,5 +1,5 @@
 <template>
-    <v-container class="d-flex align-center justify-center" align="center" id="container" style="height: 100vh;">
+    <v-container class="d-flex align-center justify-center" align="center" id="home" style="height: 100vh;">
         <div class="d-flex flex-wrap justify-center align-center">
             <div class=" d-flex flex-column flex-wrap justify-center align-center">
                 <v-row class="d-flex align-center justify-center">
@@ -33,7 +33,7 @@
                                 class="ranielle elevation-24"></v-img> -->
                         <!-- </div> -->
                         <v-img src="/images/webdev.png" min-height="300" min-width="300"
-                            class="ranielle elevation-24"></v-img>
+                            class="ranielle"></v-img>
                     </v-col>
                 </v-row>
 
@@ -89,7 +89,7 @@ export default {
     }
 }
 
-#container {
+#home {
     animation: slideUp 0.5s ease-out forwards;
 }
 </style>

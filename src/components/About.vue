@@ -41,7 +41,7 @@
                     <v-col>
                         <!-- Profile Image -->
                         <v-img src="/images/lloyd-pic.jpg" min-height="300" min-width="300"
-                            class="ranielle elevation-24"></v-img>
+                            class="ranielle"></v-img>
                     </v-col>
                 </v-row>
             </div>
