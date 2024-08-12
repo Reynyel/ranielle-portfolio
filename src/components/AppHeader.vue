@@ -9,9 +9,11 @@
                     </router-link>
                 </v-col>
                 <v-col cols="auto">
-                    <router-link class="nav">
-                        <v-btn class="text-white list-title text" @click="scrollToAbout">About</v-btn>
-                    </router-link>
+                    <v-list-item @click="scrollToAbout" class="text">
+                        <router-link class="nav">
+                            <v-list-item-title class="text-white list-title text">About</v-list-item-title>
+                        </router-link>
+                    </v-list-item>
                 </v-col>
                 <v-col cols="auto">
                     <router-link class="nav">
