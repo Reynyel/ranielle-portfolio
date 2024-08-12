@@ -2,7 +2,7 @@
 
     <v-container class="skills-section" style="min-height: 100vh;" align="center" id="skills">
         <div>
-            <p class="text-h5 mb-5">My Skills</p>
+            <p class="text-h3 mb-5">My Skills</p>
         </div>
         <div class="d-flex align-center justify-center" align="start" id="container">
             <v-row justify="center">
@@ -27,6 +27,9 @@ export default {
             { name: "PHP", icon: "mdi-language-php" },
             { name: "Laravel", icon: "mdi-laravel" },
             { name: "Node.js", icon: "mdi-nodejs" },
+            { name: "Java", icon: "mdi-language-java" },
+            { name: "C#", icon: "mdi-language-csharp" },
+            { name: "Python", icon: "mdi-language-python" },
         ],
     }),
     methods: {

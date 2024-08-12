@@ -48,6 +48,11 @@ export default {
                     src: '/images/projects/transpo2.png',
                     subtitle: "Developed a vehicle rental web app with distance-based pricing.",
                 },
+                {
+                    title: 'Web Portfolio',
+                    src: '/images/projects/portfolio.png',
+                    subtitle: "Developed a web app portfolio do display my projects.",
+                },
             ],
         }
     },

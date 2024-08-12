@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- App bar for larger screens -->
-        <v-app-bar app fixed class="app-bar text-center d-flex justify-center" v-if="!smAndDown">
+        <v-app-bar app fixed class="app-bar text-center d-flex justify-center align-center" v-if="!smAndDown">
             <v-row align="center" justify="center" class="flex-container">
                 <v-col cols="auto">
                     <router-link to="/" @click="scrollToHome" class="nav">
@@ -124,11 +124,12 @@ export default {
 }
 
 .app-bar {
+    height: 8vh;
+
+}
+
+.app-bar:hover{
     height: 10vh;
-    padding: 0 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .toolbar-title {
