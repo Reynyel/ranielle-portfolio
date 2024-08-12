@@ -9,20 +9,18 @@
                     </router-link>
                 </v-col>
                 <v-col cols="auto">
-                    <v-list-item @click="scrollToAbout" class="text">
-                        <router-link class="nav">
-                            <v-list-item-title class="text-white list-title text">About</v-list-item-title>
-                        </router-link>
-                    </v-list-item>
-                </v-col>
-                <v-col cols="auto">
-                    <router-link class="nav">
-                        <v-btn class="text-white list-title text" @click="scrollToSkills">Skills</v-btn>
+                    <router-link to="/" @click="scrollToAbout" class="nav">
+                        <v-btn class="text-white list-title text">About</v-btn>
                     </router-link>
                 </v-col>
                 <v-col cols="auto">
-                    <router-link class="nav">
-                        <v-btn class="text-white list-title text" @click="scrollToProjects">Projects</v-btn>
+                    <router-link to="/" @click="scrollToSkills" class="nav">
+                        <v-btn class="text-white list-title text">Skills</v-btn>
+                    </router-link>
+                </v-col>
+                <v-col cols="auto">
+                    <router-link to="/" @click="scrollToProjects" class="nav">
+                        <v-btn class="text-white list-title text">Projects</v-btn>
                     </router-link>
                 </v-col>
             </v-row>
