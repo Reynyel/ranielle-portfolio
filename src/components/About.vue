@@ -1,5 +1,5 @@
 <template>
-    <v-container class="d-flex align-center justify-center" align="center" id="container">
+    <v-container class="about-section" align="center" id="about">
         <!-- About Section (My Journey) -->
         <div class="d-flex flex-wrap justify-center align-center">
             <div class=" d-flex flex-column flex-wrap justify-center align-center">
@@ -51,35 +51,12 @@
     <!-- Adding Space Between Sections -->
     <v-container class="my-10"></v-container>
 
-    <!-- My Skills Section -->
-    <v-container>
-        <div>
-            <p class="text-h5 mb-5">My Skills</p>
-        </div>
-        <div class="d-flex align-center justify-center" align="start" id="container">
-            <v-row justify="center">
-                <v-col cols="12" sm="6" md="4" lg="3" class="text-center" v-for="skill in skills" :key="skill.name">
-                    <v-icon large class="ma-4">{{ skill.icon }}</v-icon>
-                    <p class="text-h6 mt-2">{{ skill.name }}</p>
-                </v-col>
-            </v-row>
-        </div>
-    </v-container>
 </template>
 <script>
 export default {
-    name: "Home page",
+    name: "about",
     data: () => ({
-        skills: [
-            { name: "Javascript", icon: "mdi-language-javascript" },
-            { name: "VueJS", icon: "mdi-vuejs" },
-            { name: "HTML5", icon: "mdi-language-html5" },
-            { name: "CSS", icon: "mdi-language-css3" },
-            { name: "Tailwind CSS", icon: "mdi-tailwind" },
-            { name: "PHP", icon: "mdi-language-php" },
-            { name: "Laravel", icon: "mdi-laravel" },
-            { name: "Node.js", icon: "mdi-nodejs" },
-        ],
+      
     }),
     methods: {
         zoomIn(event) {
@@ -102,6 +79,15 @@ export default {
     min-width: 50%;
     height: auto;
     min-height: 50%;
+}
+
+.about-section {
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
 }
 
 @keyframes slideUp {

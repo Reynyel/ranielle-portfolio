@@ -16,23 +16,24 @@
                                 </p>
 
                                 <div class="d-flex align-center justify-center ga-5">
-                                    <v-btn class="mt-4" rounded="lg" size="x-large">About</v-btn>
-                                    <v-btn class="mt-4" rounded="lg" size="x-large" variant="outlined" href="/public/resume/Cruz-Resume.pdf" download>Resume</v-btn>
+                                    <v-btn class="mt-4" rounded="lg" size="x-large" @click="scrollToAbout">About</v-btn>
+                                    <v-btn class="mt-4" rounded="lg" size="x-large" variant="outlined"
+                                        href="/public/resume/Cruz-Resume.pdf" download>Resume</v-btn>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </v-col>
                     <v-col>
                         <!-- <div class="d-flex flex-column rounded-5 align-center justify-center"> -->
-                            <!-- <picture>
+                        <!-- <picture>
                                 <img src="/images/lloyd-pic.jpg" class="img-thumbnail rounded-circle">
                             </picture> -->
-                            <!-- <v-img src="/images/webdev.png" min-height="300" min-width="300"
+                        <!-- <v-img src="/images/webdev.png" min-height="300" min-width="300"
                                 class="ranielle elevation-24"></v-img> -->
                         <!-- </div> -->
                         <v-img src="/images/webdev.png" min-height="300" min-width="300"
-                        class="ranielle elevation-24"></v-img>
+                            class="ranielle elevation-24"></v-img>
                     </v-col>
                 </v-row>
 
@@ -43,7 +44,7 @@
 </template>
 <script>
 export default {
-    name: "Home page",
+    name: "Homepage",
     data: () => ({
 
     }),
@@ -52,6 +53,12 @@ export default {
             event.currentTarget.style.transform = 'scale(1.05)';
         },
 
+        scrollToAbout() {
+            const footer = document.getElementById('about');
+            if (footer) {
+                footer.scrollIntoView({ behavior: 'smooth' });
+            }
+        },
     }
 }
 </script>

@@ -1,59 +1,31 @@
 <template>
     <div>
         <!-- App bar for larger screens -->
-        <v-app-bar app fixed class="app-bar" v-if="!smAndDown">
-            <div class="d-flex align-center justify-center">
-                <router-link to="/" class="nav">
-                    <v-toolbar-title class="toolbar-title text-black"
-                        style="font-size: 24px; font-weight: 900; text-transform: uppercase" @click="scrollToContainer">
-                        Ros Properties
-                    </v-toolbar-title>
-                </router-link>
-                <v-spacer></v-spacer>
-                <v-row align="center" justify="end" class="flex-container">
-                    <v-col cols="auto">
-                        <router-link to="/" class="nav">
-                            <v-btn class="text-black list-title text">Intro</v-btn>
-                        </router-link>
-                    </v-col>
-                    <v-col cols="auto">
-                        <v-menu transition="slide-y-transition" offset-y>
-                            <template v-slot:activator="{ props }">
-                                <v-btn v-bind="props" class="list-title text">About</v-btn>
-                            </template>
-                            <v-list class="text">
-                                <v-list-item>
-                                    <router-link to="/exclusivelistings" class="nav">
-                                        <v-list-item-title>Our Exclusive Listings</v-list-item-title>
-                                    </router-link>
-                                </v-list-item>
-                                <v-list-item>
-                                    <router-link to="/openhouses" class="nav">
-                                        <v-list-item-title>Open Houses</v-list-item-title>
-                                    </router-link>
-                                </v-list-item>
-                                <v-list-item>
-                                    <router-link to="/soldlistings" class="nav">
-                                        <v-list-item-title>Our Sold Listings</v-list-item-title>
-                                    </router-link>
-                                </v-list-item>
-                            </v-list>
-                        </v-menu>
-                    </v-col>
-                    <v-col cols="auto">
-                        <router-link to="/about" class="nav">
-                            <v-btn class="text-black list-title text">Projects</v-btn>
-                        </router-link>
-                    </v-col>
-                    <v-col cols="auto">
-                        <router-link class="nav">
-                            <v-btn class="text-black list-title text" @click="scrollToFooter">Connect</v-btn>
-                        </router-link>
-                    </v-col>
-                </v-row>
-            </div>
-
+        <v-app-bar app fixed class="app-bar text-center d-flex justify-center" v-if="!smAndDown">
+            <v-row align="center" justify="center" class="flex-container">
+                <v-col cols="auto">
+                    <router-link to="/" class="nav">
+                        <v-btn class="text-white list-title text">Home</v-btn>
+                    </router-link>
+                </v-col>
+                <v-col cols="auto">
+                    <router-link class="nav">
+                        <v-btn class="text-white list-title text" @click="scrollToAbout">About</v-btn>
+                    </router-link>
+                </v-col>
+                <v-col cols="auto">
+                    <router-link class="nav">
+                        <v-btn class="text-white list-title text" @click="scrollToSkills">Skills</v-btn>
+                    </router-link>
+                </v-col>
+                <v-col cols="auto">
+                    <router-link class="nav">
+                        <v-btn class="text-white list-title text" @click="scrollToProjects">Projects</v-btn>
+                    </router-link>
+                </v-col>
+            </v-row>
         </v-app-bar>
+
 
         <!-- Navigation drawer for smaller screens -->
         <v-navigation-drawer app v-if="smAndDown" v-model="drawer" temporary>
@@ -80,23 +52,6 @@
                                     </template>
                                 </v-expansion-panel-title>
 
-                                <v-expansion-panel-text>
-                                    <router-link to="/exclusivelistings" class="nav text">
-                                        <v-list-item-title v-bind="props"
-                                            :color="isHovering ? 'primary' : undefined">Our Exclusive
-                                            Listings</v-list-item-title>
-                                    </router-link>
-                                </v-expansion-panel-text>
-                                <v-expansion-panel-text>
-                                    <router-link to="/openhouses" class="nav text">
-                                        <v-list-item-title>Open Houses</v-list-item-title>
-                                    </router-link>
-                                </v-expansion-panel-text>
-                                <v-expansion-panel-text>
-                                    <router-link to="/soldlistings" class="nav text">
-                                        <v-list-item-title>Our Sold Listings</v-list-item-title>
-                                    </router-link>
-                                </v-expansion-panel-text>
                             </v-expansion-panel>
                         </template>
                     </v-hover>
@@ -119,7 +74,7 @@
         <!-- Mobile app bar -->
         <v-app-bar app fixed v-if="smAndDown">
             <v-app-bar-nav-icon @click="toggleDrawer" />
-            <v-toolbar-title>Ros Properties</v-toolbar-title>
+
         </v-app-bar>
     </div>
 </template>
@@ -129,7 +84,7 @@ import { ref } from 'vue';
 import { useDisplay } from 'vuetify';
 
 export default {
-    name: 'nav',
+    name: 'header',
     data: () => ({
     }),
     setup() {
@@ -147,8 +102,20 @@ export default {
         };
     },
     methods: {
-        scrollToFooter() {
-            const footer = document.getElementById('footer');
+        scrollToAbout() {
+            const footer = document.getElementById('about');
+            if (footer) {
+                footer.scrollIntoView({ behavior: 'smooth' });
+            }
+        },
+        scrollToSkills() {
+            const footer = document.getElementById('skills');
+            if (footer) {
+                footer.scrollIntoView({ behavior: 'smooth' });
+            }
+        },
+        scrollToProjects() {
+            const footer = document.getElementById('projects');
             if (footer) {
                 footer.scrollIntoView({ behavior: 'smooth' });
             }
