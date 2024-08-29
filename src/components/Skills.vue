@@ -22,7 +22,8 @@ export default {
     data: () => ({
         skills: [
             { name: "Javascript", icon: "mdi-language-javascript", value: 65 },
-            { name: "VueJS", icon: "mdi-vuejs", value: 65 },
+            { name: "Vue.js", icon: "mdi-vuejs", value: 65 },
+            { name: "React", icon: "mdi-react", value: 45 },
             { name: "HTML5", icon: "mdi-language-html5", value: 75 },
             { name: "CSS", icon: "mdi-language-css3", value: 60 },
             { name: "Bootstrap", icon: "mdi-bootstrap", value: 70 },

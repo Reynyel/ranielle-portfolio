@@ -49,6 +49,11 @@ export default {
                     subtitle: "Developed a vehicle rental web app with distance-based pricing. Powered by VueJs and Laravel.",
                 },
                 {
+                    title: 'RLDev UI',
+                    src: '/images/projects/rldev.png',
+                    subtitle: "Developed a frontend mockup from canva. Written in React and Tailwind.",
+                },
+                {
                     title: 'Web Portfolio',
                     src: '/images/projects/portfolio.png',
                     subtitle: "Developed a web app portfolio do display my projects. Written in Vue.",

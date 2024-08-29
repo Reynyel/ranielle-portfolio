@@ -1,5 +1,5 @@
 <template>
-  <v-footer height="40" app>
+  <v-footer height="50" app>
     <a v-for="item in items" :key="item.title" :href="item.href" :title="item.title"
       class="d-inline-block mx-2 social-link" rel="noopener noreferrer" target="_blank">
       <v-icon :icon="item.icon" :size="item.icon === '$vuetify' ? 24 : 16" />
@@ -7,15 +7,6 @@
 
     <div class="text-caption text-disabled" style="position: absolute; right: 16px;">
       &copy; {{ (new Date()).getFullYear() }} <span class="d-none d-sm-inline-block">Cruz, Ranielle Lloyd</span>
-      <!-- —
-      <a
-        class="text-decoration-none on-surface"
-        href="https://vuetifyjs.com/about/licensing/"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        MIT License
-      </a> -->
     </div>
   </v-footer>
 </template>
