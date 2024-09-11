@@ -35,7 +35,7 @@ export default {
                     subtitle: "Developed the frontend interface for a property listings web application. Written in Vue.",
                 },
                 {
-                    title: 'Wook Travel',
+                    title: 'Woox Travel',
                     src: '/images/projects/woox.png',
                     subtitle: "A traveling website written in Bootstrap and Laravel.",
                 },
