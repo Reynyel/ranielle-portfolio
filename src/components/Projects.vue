@@ -6,7 +6,8 @@
         <v-carousel class="fill-height" v-model="model" hide-delimiter-background>
             <v-carousel-item v-for="(item, i) in items" :key="i" :src="item.src" cover>
                 <v-row class="fill-height d-flex flex-wrap align-bottom justify-center">
-                    <div class="d-flex flex-wrap align-center justify-center flex-column pb-5 mb-5" style="position: absolute; bottom: 0;">
+                    <div class="d-flex flex-wrap align-center justify-center flex-column pb-5 mb-5"
+                        style="position: absolute; bottom: 0;">
                         <div class="carousel-subtitle d-flex align-center justify-center flex-column">
                             <span class="text-h6">
                                 {{ item.title }}
@@ -32,6 +33,11 @@ export default {
                     title: 'Ros Properties',
                     src: '/images/projects/ros-ui.png',
                     subtitle: "Developed the frontend interface for a property listings web application. Written in Vue.",
+                },
+                {
+                    title: 'Wook Travel',
+                    src: '/images/projects/woox.png',
+                    subtitle: "A traveling website written in Bootstrap and Laravel.",
                 },
                 {
                     title: 'Freshcery',
